@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    height: 100px;
+    text-align: center;
+    background-color: brown;
+}
+
+h1{
+    font-size: 60px;
+    color:aliceblue;
+}
+main{
+    height: 1500px;
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+}
+
+.highScore{
+    background-color: rgba(134, 190, 190, 0.92);
+    color: black;
+    height: 30px;
+    width: 150px;
+}
+
+.left ol{
+    width: 150px;
+    background-color: rgb(98, 98, 98);
+}
+.left ol li{
+    color:black;
+}
+
+.Questions{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(103, 103, 103);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    font-size: 35px;
+}
+
+.answer{
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+.timer{
+    width: 150px;
+    background-color:  rgba(134, 190, 190, 0.92);
+    height: 30px;
+}
