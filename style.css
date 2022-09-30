@@ -48,10 +48,14 @@ main{
     align-items: center;
 }
 
-h2{
+#questionHead{
     font-size: 35px;
+    visibility: hidden;
 }
 
+#QAnswer{
+visibility: hidden;
+}
 .answer{
     height: 320px;
     display: flex;
@@ -59,7 +63,12 @@ h2{
     justify-content: space-between;
 }
 
-
+#next{
+    visibility: hidden;
+}
+#start{
+    visibility: visible;
+}
 
 
 .timer{

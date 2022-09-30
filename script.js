@@ -30,7 +30,6 @@ var q7 = [Question7,Answers7]
 var q8 = [Question8,Answers8]
 var q9 = [Question9,Answers9]
 var q10 = [Question10,Answers10]
-
 var questionNum = [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10]
 //Randomize question
 function randQues() {
@@ -45,12 +44,12 @@ function randQues() {
 
 
 //Randomize andswers
-questOn=0
+
 function randAnsQuestOn() {
     randAnsEnd = []
     randAnsStart = []
     randAnsStart = randArrEnd[questOn][1]
-    for( i=0 ; i < Answers1.length;i++){
+    for( i=0 ; i < 4;i++){
     randAns = Math.floor(Math.random() * randAnsStart.length)
     randAnsEnd.push(randAnsStart[randAns])
     randAnsStart.splice(randAns, 1)
@@ -60,32 +59,42 @@ function randAnsQuestOn() {
 var next = document.querySelector("#next")
 
 function nextQues(){
+    askQues()
     questOn = questOn + 1
 }
-function startQuiz(){
-    randQues()
-    for(questOn = 0; questOn < 9;){
-        randAnsQuestOn()
-        document.querySelector("#question-head").innerHTML = randArrEnd[questOn][0]
-        document.querySelector("#ans1").innerHTML = randAnsEnd[0]
-        document.querySelector("#ans2").innerHTML = randAnsEnd[1]
-        document.querySelector("#ans3").innerHTML = randAnsEnd[2]
-        document.querySelector("#ans4").innerHTML = randAnsEnd[3]
-        
-        // next.addEventListener("click", nextQues)
-    }
+
+function askQues(){
+    randAnsQuestOn()
+    document.querySelector("#questionHead").innerHTML = randArrEnd[questOn][0]
+    document.querySelector("#ans1").innerHTML = randAnsEnd[0]
+    document.querySelector("#ans2").innerHTML = randAnsEnd[1]
+    document.querySelector("#ans3").innerHTML = randAnsEnd[2]
+    document.querySelector("#ans4").innerHTML = randAnsEnd[3]    
 }
 
 
 
+function startQuiz(){
+    questOn=0
+    randQues()
+    askQues()
+    console.log(document)
+    questOn = questOn + 1
+    document.getElementById("next").setAttribute("style" ,"visibility: visible;");
+    document.getElementById("QAnswer").setAttribute('style', 'visibility: visible;');
+    document.getElementById("questionHead").setAttribute('style', 'visibility: visible;');
+    document.getElementById("start").setAttribute("style" ,"visibility: hidden;");
+}
 
 
+// var questionNextDisplay = document.getElementById("#next")
+// console.log(questionNextDisplay.style)
 
 
 // when start is pressed
 var startQ = document.querySelector("#start");
 startQ.addEventListener("click", startQuiz);
-
+next.addEventListener("click", nextQues)
 //compare choice to correct
 
 //dispaly score
