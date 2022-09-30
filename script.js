@@ -69,7 +69,7 @@ function askQues(){
     document.querySelector("#ans1").innerHTML = randAnsEnd[0]
     document.querySelector("#ans2").innerHTML = randAnsEnd[1]
     document.querySelector("#ans3").innerHTML = randAnsEnd[2]
-    document.querySelector("#ans4").innerHTML = randAnsEnd[3]    
+    document.querySelector("#ans4").innerHTML = randAnsEnd[3]
 }
 
 
