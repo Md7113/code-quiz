@@ -42,7 +42,7 @@ function randQues() {
     randArrStart.splice(randOrder, 1)
     }
 }
-randQues()
+
 
 //Randomize andswers
 questOn=0
@@ -57,11 +57,34 @@ function randAnsQuestOn() {
     }
 }
 
-randAnsQuestOn()
-console.log(randAnsEnd)
+var next = document.querySelector("#next")
+
+function nextQues(){
+    questOn = questOn + 1
+}
+function startQuiz(){
+    randQues()
+    for(questOn = 0; questOn < 9;){
+        randAnsQuestOn()
+        document.querySelector("#question-head").innerHTML = randArrEnd[questOn][0]
+        document.querySelector("#ans1").innerHTML = randAnsEnd[0]
+        document.querySelector("#ans2").innerHTML = randAnsEnd[1]
+        document.querySelector("#ans3").innerHTML = randAnsEnd[2]
+        document.querySelector("#ans4").innerHTML = randAnsEnd[3]
+        
+        // next.addEventListener("click", nextQues)
+    }
+}
+
+
+
+
+
+
 
 // when start is pressed
-
+var startQ = document.querySelector("#start");
+startQ.addEventListener("click", startQuiz);
 
 //compare choice to correct
 
