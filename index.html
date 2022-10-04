@@ -14,37 +14,43 @@
     </header>
     <main>
         <section class="left">
-            <button class="highScore" id="highscore">See High Scores</button>
+            <button  id="highscore">See High Scores</button>
             <ol>
-                <li>Question 1</li>
-                <li>Question 2</li>
-                <li>Question 3</li>
-                <li>Question 4</li>
-                <li>Question 5</li>
-                <li>Question 6</li>
-                <li>Question 7</li>
-                <li>Question 8</li>
-                <li>Question 9</li>
-                <li>Question 10</li>
+                <li id="0">Question 1</li>
+                <li id="1">Question 2</li>
+                <li id="2">Question 3</li>
+                <li id="3">Question 4</li>
+                <li id="4">Question 5</li>
+                <li id="5">Question 6</li>
+                <li id="6">Question 7</li>
+                <li id="7">Question 8</li>
+                <li id="8">Question 9</li>
+                
             </ol>
         </section>
         <section class="Questions">
             <h2 id="questionHead"></h2>
             <div id="QAnswer">
                 <ol class="answer">
-                    <li><input type="checkbox" id="ans1CH"><label for="ans1CH" id="ans1"></label></li>
-                    <li><input type="checkbox" id="ans2CH"><label for="ans2CH" id="ans2"></label></li>
-                    <li><input type="checkbox" id="ans3CH"><label for="ans3CH" id="ans3"></label></li>
-                    <li><input type="checkbox" id="ans4CH"><label for="ans4CH" id="ans4"></label></li>
+                    <li class="answerSelect" id="ans1"></li>
+                    <li class="answerSelect" id="ans2"></li>
+                    <li class="answerSelect" id="ans3"></li>
+                    <li class="answerSelect" id="ans4"></li>
                 </ol>
                 
             </div>
             <div class="buttons">
-                <button id="next">next</button>
+                <!-- <button id="next">next</button> -->
                 <button id="start">start</button>
             </div>
         </section>
-        <section class="timer"></section>
+        <section id="Score">
+            <h2>Score Board</h2>
+            <ol id="scoreList">
+
+            </ol>
+        </section>
+        <section id="timer"></section>
         <script src="script.js"></script>
     </main>
 </body>

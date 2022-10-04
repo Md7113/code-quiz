@@ -23,7 +23,7 @@ main{
     flex-direction: column;
 }
 
-.highScore{
+#highScore{
     background-color: rgba(134, 190, 190, 0.92);
     color: black;
     height: 30px;
@@ -32,7 +32,7 @@ main{
 
 .left ol{
     width: 150px;
-    background-color: rgb(98, 98, 98);
+    background-color: rgb(225, 225, 225);
 }
 .left ol li{
     color:black;
@@ -56,6 +56,13 @@ main{
 #QAnswer{
 visibility: hidden;
 }
+
+#QAnswer ol li{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgb(85, 124, 169);
+}
 .answer{
     height: 320px;
     display: flex;
@@ -70,9 +77,18 @@ visibility: hidden;
     visibility: visible;
 }
 
+#Score h2{
+font-size: 45px;
+}
 
-.timer{
+#Score ol{
+    display: flex;
+    flex-direction: column;
+}
+
+#timer{
+    font-size: 45px;
     width: 150px;
     background-color:  rgba(134, 190, 190, 0.92);
-    height: 30px;
+    height: 100px;
 }
