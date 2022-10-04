@@ -134,6 +134,10 @@ function startQuiz(){
     timerInt = setInterval(function(){
         timeLeft--
         document.getElementById("timer").innerHTML = "Time Left:"+timeLeft
+        if(timeLeft < 0 ){
+            clearInterval(timerInt)
+            endGame() 
+        }
     },1000)
     for(i=0; i<9;i++){
         document.getElementById(i).setAttribute("style","color: black;")
